@@ -1,8 +1,9 @@
 import React from 'react'
+import { HeaderFilter } from '../../components/molecules/HeaderFilter'
 
 export function Home() {
   return (
-    <h1>home</h1>
+    <HeaderFilter />
 
   )
 }

@@ -9,3 +9,11 @@ export type TypeInput = HTMLAttributes<HTMLInputElement>
 export type TypeSelect = {
   children: ReactNode;
 }
+
+export type TypeCheckBoxCustom = {
+  label: string;
+}
+
+export type typeCustomSwitcher = {
+  label: string;
+}

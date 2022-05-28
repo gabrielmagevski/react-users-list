@@ -8,8 +8,8 @@ export const CustomSwitcher = styled.div`
 
   input[type="checkbox"] {
     position: relative;
-    width: 80px;
-    height: 40px;
+    width: 60px;
+    height: 35px;
     -webkit-appearance: none;
     background: #c6c6c6;
     outline: none;
@@ -22,8 +22,9 @@ export const CustomSwitcher = styled.div`
   input[type="checkbox"]:before {
    content: '';
    position: absolute;
-   width: 40px;
-   height: 40px;
+   width: 25px;
+   height: 25px;
+   margin-top: 5px;
    border-radius: 20px;
    top: 0;
    left: 0;
@@ -31,14 +32,15 @@ export const CustomSwitcher = styled.div`
    transform: scale(1.1);
    box-shadow: 0 2px 5px rgba(0,0,0, .2);
    transition: .5s;
+   left: 5px;  
   }
 
   input:checked[type="checkbox"]:before {
-    left: 40px;
+    left: 30px;
   }
 
   input + label:before {
     content: '';
-    margin-right: 10px;
+    margin-right: 15px;
   }
 `;

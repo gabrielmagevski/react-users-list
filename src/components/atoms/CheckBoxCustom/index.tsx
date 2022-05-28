@@ -1,12 +1,13 @@
 import React from 'react';
-import { CustomCheckbox   } from './styles';
+import { TypeCheckBoxCustom } from '../../../@types';
+import { CustomCheckbox } from './styles';
 
-export function CheckBoxCustom() {
+export function CheckBoxCustom({ label }: TypeCheckBoxCustom) {
   return (
     <>
       <CustomCheckbox>
-        <input id="Adults" type="checkbox" />
-        <label htmlFor="Adults">Adults</label>
+        <input id="check" type="checkbox" />
+        <label htmlFor="check">{label}</label>
       </CustomCheckbox>
     </>
   )

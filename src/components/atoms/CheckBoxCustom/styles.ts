@@ -15,6 +15,7 @@ export const CustomCheckbox = styled.div`
     vertical-align: middle;
     margin-right: 8px;
     margin-bottom: 3px;
+    
   }
 
   input:checked + label:before {
