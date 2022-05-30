@@ -8,14 +8,6 @@ export const Header = styled.header`
   padding: 33px 0px;
 `;
 
-export const GroupSearch = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-`;
-
 export const GroupFilter = styled.div`
   display: flex;
   flex-direction: row;

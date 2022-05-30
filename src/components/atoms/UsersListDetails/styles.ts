@@ -1,6 +1,17 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const slideIn = keyframes`
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+`;
 
 export const UsersTrs = styled.tr`
+  animation: ${slideIn} 0.5s cubic-bezier(0.4, 0, 0.2, 1) both;
   display: flex;
   justify-content: center;
   align-items: center;

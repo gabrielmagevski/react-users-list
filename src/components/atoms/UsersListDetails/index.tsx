@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { ProfileImage } from '../ProfileImage'
 import { UsersInformations, UsersTitle, UsersTrs } from './styles'
 
-export function UsersListDetailed() {
+export function UsersListDetails() {
   const navigate = useNavigate();
   return (
     <>

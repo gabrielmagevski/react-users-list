@@ -4,13 +4,13 @@ import {
   Route,
 } from "react-router-dom";
 import { Home } from '../pages/Home';
-import { UserDetailhed } from '../pages/UserDetailhed';
+import { ProfileUserDetails } from '../pages/ProfileUserDetails';
 
 export function Root() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/userDetailhed" element={<UserDetailhed />} />
+      <Route path="/profile" element={<ProfileUserDetails />} />
     </Routes>
   )
 }

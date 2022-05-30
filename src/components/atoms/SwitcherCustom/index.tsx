@@ -2,10 +2,10 @@ import React from 'react'
 import { typeCustomSwitcher } from '../../../@types'
 import { CustomSwitcher } from './styles'
 
-export function SwitcherCustom({ label }: typeCustomSwitcher) {
+export function SwitcherCustom({ label, ...props }: typeCustomSwitcher) {
   return (
     <CustomSwitcher>
-      <input id="switch" type="checkbox" />
+      <input {...props} id="switch" type="checkbox" />
       <label htmlFor="switch">{label}</label>
     </CustomSwitcher>
   )

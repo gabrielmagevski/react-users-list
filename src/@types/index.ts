@@ -1,4 +1,4 @@
-import { HTMLAttributes, ReactNode } from "react"
+import { HTMLAttributes, InputHTMLAttributes, ReactNode } from "react"
 
 export type TypeButton = HTMLAttributes<HTMLButtonElement> & {
   children?: ReactNode;
@@ -17,7 +17,7 @@ export type TypeCheckBoxCustom = {
   label: string;
 }
 
-export type typeCustomSwitcher = {
+export type typeCustomSwitcher = HTMLAttributes<HTMLInputElement> & {
   label: string;
 }
 
@@ -26,4 +26,10 @@ export type TypeProfileImage = HTMLAttributes<HTMLImageElement> & {
   alt: string;
   wd?: string;
   position?: string;
+}
+
+export type TypeUserListContext = {
+  children?: ReactNode;
+  enableViewList?: boolean;
+  setEnableViewList?: React.Dispatch<React.SetStateAction<boolean>>;
 }

@@ -1,6 +1,6 @@
 import React from 'react'
-import { HeaderFilter } from '../../components/molecules/HeaderFilter'
-import { UsersList } from '../../components/molecules/UsersList'
+import { HeaderFilter } from '../../components/organisms/HeaderFilter'
+import { UsersList } from '../../components/templates/UsersList'
 
 export function Home() {
   return (

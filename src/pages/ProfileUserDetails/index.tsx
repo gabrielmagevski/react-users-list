@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { ButtonCustom } from '../../components/atoms/ButtonCustom'
 import { ProfileImage } from '../../components/atoms/ProfileImage'
 
-import { Maps } from '../../components/molecules/Maps'
+import { Maps } from '../../components/organisms/Maps'
 import { 
   CenteredDetails,
   CenteredAvatar, 
@@ -11,7 +11,7 @@ import {
   ProfileName
 } from './styles'
 
-export function UserDetailhed() {
+export function ProfileUserDetails() {
   const navigate = useNavigate();
   
   return (
