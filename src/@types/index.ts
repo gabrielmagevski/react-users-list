@@ -2,6 +2,9 @@ import { HTMLAttributes, ReactNode } from "react"
 
 export type TypeButton = HTMLAttributes<HTMLButtonElement> & {
   children?: ReactNode;
+  position?: string;
+  zIndex?: string;
+  mg?: string;
 }
 
 export type TypeInput = HTMLAttributes<HTMLInputElement>
@@ -22,4 +25,5 @@ export type TypeProfileImage = HTMLAttributes<HTMLImageElement> & {
   src: string;
   alt: string;
   wd?: string;
+  position?: string;
 }

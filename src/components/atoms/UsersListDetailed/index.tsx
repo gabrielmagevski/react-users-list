@@ -1,8 +1,10 @@
 import React from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 import { ProfileImage } from '../ProfileImage'
 import { UsersInformations, UsersTitle, UsersTrs } from './styles'
 
 export function UsersListDetailed() {
+  const navigate = useNavigate();
   return (
     <>
       <UsersTrs>    
@@ -14,7 +16,13 @@ export function UsersListDetailed() {
       </UsersTrs>
       <UsersTrs>
         <UsersInformations>
-          <ProfileImage src='https://github.com/gabrielmagevski.png' alt='foto' />
+         
+          <ProfileImage
+            onClick={() => navigate('/userDetailhed')}
+            src='https://github.com/gabrielmagevski.png' 
+            alt='foto' 
+          />
+         
         </UsersInformations>
         <UsersInformations>Gabriel</UsersInformations>
         <UsersInformations>19</UsersInformations>

@@ -1,10 +1,15 @@
 import styled from "styled-components";
+import { TypeButton } from "../../../@types";
 
-export const Button = styled.button`
+export const Button = styled.button<TypeButton>`
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100px;
+  position: ${props => props.position ? props.position : 'relative'};
+  z-index: ${props => props.zIndex ? props.zIndex : '0'};
+  margin: ${props => props.mg ? props.mg : '0px 0px 0px 0px'};
+
   
   background-color: #0099FF;
   color: #FFF;
