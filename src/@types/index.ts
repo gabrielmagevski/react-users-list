@@ -17,3 +17,9 @@ export type TypeCheckBoxCustom = {
 export type typeCustomSwitcher = {
   label: string;
 }
+
+export type TypeProfileImage = HTMLAttributes<HTMLImageElement> & {
+  src: string;
+  alt: string;
+  wd?: string;
+}
