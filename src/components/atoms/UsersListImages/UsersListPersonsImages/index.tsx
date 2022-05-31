@@ -11,7 +11,7 @@ export default function UsersListPersonImages({ data }: TypeDataPersons) {
     <UsersImageInformations>
         
     <ProfileImage
-      onClick={() => navigate('/userDetailhed')}
+      onClick={() => navigate('/profile')}
       wd="150px" 
       src={data.picture.large} 
       alt={data.name.first}

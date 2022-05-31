@@ -11,7 +11,7 @@ export function ListPersons({ data }: TypeDataPersons) {
       <UsersInformations>
       
         <ProfileImage
-          onClick={() => navigate('/userDetailhed')}
+          onClick={() => navigate('/profile')}
           src={data.picture.large} 
           alt={data.name.first}
         />

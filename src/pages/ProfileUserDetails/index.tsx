@@ -4,6 +4,7 @@ import { ButtonCustom } from '../../components/atoms/ButtonCustom'
 import { ProfileImage } from '../../components/atoms/ProfileImage'
 
 import { Maps } from '../../components/organisms/Maps'
+import { useSearchPersons } from '../../hooks/useSearchPersons'
 import { 
   CenteredDetails,
   CenteredAvatar, 
@@ -11,11 +12,14 @@ import {
   ProfileName
 } from './styles'
 
-export function ProfileUserDeta() {
+export function ProfileUserDetails() {
+  const { usersList } = useSearchPersons();
   const navigate = useNavigate();
   
   return (
    <>
+   {usersList.map(users => 
+    <>
       <ButtonCustom
        mg='5px 200px' 
        zIndex='10' 
@@ -29,14 +33,16 @@ export function ProfileUserDeta() {
         <ProfileImage
           wd="150px"
           position='absolute'
-          src='https://github.com/gabrielmagevski.png' 
+          src={users.picture.large} 
           alt='foto'
         />
       </CenteredAvatar>
       <CenteredDetails>
-        <ProfileName>Gabriel</ProfileName>
-        <Description>Gabriel alive in Brazil</Description>
+        <ProfileName>{users.name.first}</ProfileName>
+        <Description>{`${users.name.first} lives ${users.location.country}`}</Description>
       </CenteredDetails>
+    </>
+    )}
    </>
   )
 }

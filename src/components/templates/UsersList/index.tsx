@@ -8,7 +8,7 @@ export function UsersList() {
   const { enableViewList } = useContext(UserListContext);
   return (
     <UsersTable>
-      { enableViewList ? <UsersListDetails /> : <UsersListImages /> }
+      { enableViewList ? <UsersListImages /> : <UsersListDetails />}
     </UsersTable>
   )
 }

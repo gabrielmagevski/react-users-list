@@ -22,8 +22,13 @@ export const UsersTrs = styled.tr`
 export const UsersTitle = styled.th`
   font-size: 18px;
   font-weight: 400;
+  text-align: center;
+  width: 40px;
 `;
 
 export const UsersInformations = styled.td`
   font-size: 18px;
+  text-align: center;
+  width: 40px;
+
 `;
