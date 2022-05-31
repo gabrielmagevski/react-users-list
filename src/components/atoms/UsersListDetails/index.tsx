@@ -1,34 +1,20 @@
 import React from 'react'
-import { Link, useNavigate } from 'react-router-dom'
-import { ProfileImage } from '../ProfileImage'
-import { UsersInformations, UsersTitle, UsersTrs } from './styles'
+import { useSearchPersons } from '../../../hooks/useSearchPersons';
+import { ListPersons } from './ListPersons';
+import { UsersTitle, UsersTrs } from './styles'
 
 export function UsersListDetails() {
-  const navigate = useNavigate();
+  const { usersList } = useSearchPersons();
   return (
     <>
-      <UsersTrs>    
+      <UsersTrs>
         <UsersTitle>Photo</UsersTitle>
         <UsersTitle>Name</UsersTitle>
         <UsersTitle>Age</UsersTitle>
         <UsersTitle>Country</UsersTitle>
         <UsersTitle>Gender</UsersTitle>
       </UsersTrs>
-      <UsersTrs>
-        <UsersInformations>
-         
-          <ProfileImage
-            onClick={() => navigate('/userDetailhed')}
-            src='https://github.com/gabrielmagevski.png' 
-            alt='foto' 
-          />
-         
-        </UsersInformations>
-        <UsersInformations>Gabriel</UsersInformations>
-        <UsersInformations>19</UsersInformations>
-        <UsersInformations>brazil</UsersInformations>
-        <UsersInformations>Masculine</UsersInformations>
-      </UsersTrs>
+      { usersList.map(users => <ListPersons key={users.login.uuid} data={users} /> )} 
     </>
   )
 }

@@ -33,3 +33,31 @@ export type TypeUserListContext = {
   enableViewList?: boolean;
   setEnableViewList?: React.Dispatch<React.SetStateAction<boolean>>;
 }
+
+export type TypeUsers = {
+  gender: string; 
+  login: {
+    uuid: string;
+  }
+  name: {
+    first: string;
+    last: string;
+  }
+  location: {
+    country: string;  
+    coordinates: {
+      latitude: string;
+      longitude: string;
+    }
+  }
+  dob: {
+    age: string; 
+  }
+  picture: {
+    large: string;
+  }
+}
+
+export type TypeDataPersons = {
+  data: TypeUsers;
+}

@@ -11,7 +11,7 @@ import {
   ProfileName
 } from './styles'
 
-export function ProfileUserDetails() {
+export function ProfileUserDeta() {
   const navigate = useNavigate();
   
   return (
