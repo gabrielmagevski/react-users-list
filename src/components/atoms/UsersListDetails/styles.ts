@@ -16,19 +16,19 @@ export const UsersTrs = styled.tr`
   justify-content: center;
   align-items: center;
   margin-top: 50px;
-  gap: 150px;
+  gap: 70px;
 `;
 
 export const UsersTitle = styled.th`
   font-size: 18px;
   font-weight: 400;
   text-align: center;
-  width: 40px;
+  width: 200px;
 `;
 
 export const UsersInformations = styled.td`
   font-size: 18px;
   text-align: center;
-  width: 40px;
+  width: 200px;
 
 `;

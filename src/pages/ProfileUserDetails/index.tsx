@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { ButtonCustom } from '../../components/atoms/ButtonCustom'
 import { ProfileImage } from '../../components/atoms/ProfileImage'
 
 import { Maps } from '../../components/organisms/Maps'
-import { useSearchPersons } from '../../hooks/useSearchPersons'
+import { UserListContext } from '../../context/UserListContext'
+import { useProfileList } from '../../hooks/UserProfileList'
 import { 
   CenteredDetails,
   CenteredAvatar, 
@@ -13,12 +14,12 @@ import {
 } from './styles'
 
 export function ProfileUserDetails() {
-  const { usersList } = useSearchPersons();
+  const { usersList } = useContext(UserListContext);
   const navigate = useNavigate();
   
   return (
    <>
-   {usersList.map(users => 
+   {usersList?.map(users => 
     <>
       <ButtonCustom
        mg='5px 200px' 
@@ -39,7 +40,7 @@ export function ProfileUserDetails() {
       </CenteredAvatar>
       <CenteredDetails>
         <ProfileName>{users.name.first}</ProfileName>
-        <Description>{`${users.name.first} lives ${users.location.country}`}</Description>
+        <Description>{`${users.name.first} lives ${users.location.city}, ${users.location.country}`}</Description>
       </CenteredDetails>
     </>
     )}

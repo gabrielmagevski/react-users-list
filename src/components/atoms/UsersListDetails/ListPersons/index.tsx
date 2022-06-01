@@ -17,7 +17,7 @@ export function ListPersons({ data }: TypeDataPersons) {
         />
       
       </UsersInformations>
-      <UsersInformations>{data.name.first + data.name.last}</UsersInformations>
+      <UsersInformations>{`${data.name.first}` + ' ' + `${data.name.last}`}</UsersInformations>
       <UsersInformations>{data.dob.age}</UsersInformations>
       <UsersInformations>{data.location.country}</UsersInformations>
       <UsersInformations>{data.gender}</UsersInformations>

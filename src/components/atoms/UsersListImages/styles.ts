@@ -17,7 +17,7 @@ export const UsersImagesTrs = styled.tr`
   flex-wrap: wrap;
   align-items: center;
   margin-top: 50px;
-  gap: 50px;
+  gap: 150px;
 `;
 
 export const ProfileName = styled.h3`

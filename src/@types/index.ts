@@ -1,4 +1,4 @@
-import { HTMLAttributes, InputHTMLAttributes, ReactNode } from "react"
+import { Dispatch, HTMLAttributes, InputHTMLAttributes, ReactNode, SetStateAction } from "react"
 
 export type TypeButton = HTMLAttributes<HTMLButtonElement> & {
   children?: ReactNode;
@@ -32,7 +32,11 @@ export type TypeUserListContext = {
   children?: ReactNode;
   enableViewList?: boolean;
   setEnableViewList?: React.Dispatch<React.SetStateAction<boolean>>;
+  loading?: boolean;
+  setUsersList?: Dispatch<SetStateAction<TypeUsers[]>>;
+  usersList?: TypeUsers[];
 }
+
 
 export type TypeUsers = {
   gender: string; 
@@ -45,6 +49,7 @@ export type TypeUsers = {
   }
   location: {
     country: string;  
+    city: string;
     coordinates: {
       latitude: string;
       longitude: string;

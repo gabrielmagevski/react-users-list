@@ -10,9 +10,15 @@ export function Filters() {
     <>
       <SelectCustom>
         <option>All</option>
+        <option>Male</option>
+        <option>Female</option>
       </SelectCustom>
       <SelectCustom>
         <option>All</option>
+        <option>Brazil</option>
+        <option>France</option>
+        <option>United States</option>
+        <option>New Zealand</option>
       </SelectCustom>
       <CheckBoxCustom label='Adults' />
       <SwitcherCustom 
