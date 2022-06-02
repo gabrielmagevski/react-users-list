@@ -18,7 +18,6 @@ export function Filters() {
     searchUser,
     setSearchUser,
   } = useContext(UserListContext);
-
   
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
@@ -61,7 +60,7 @@ export function Filters() {
           <CheckBoxCustom label='Adults' />
           
           <SwitcherCustom 
-            onClick={() => console.log(setEnableViewList!(!enableViewList))}
+            onClick={() => setEnableViewList!(!enableViewList)}
             label='Lista'
           />
         </GroupFilter>

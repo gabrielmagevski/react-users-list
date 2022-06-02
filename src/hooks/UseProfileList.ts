@@ -15,8 +15,7 @@ export function useProfileList() {
     if (searchUser === '') {
       return userFilter;
     } else if (
-      userFilter.name.first.toLowerCase().includes(searchUser!.toLowerCase()) &&
-      userFilter.name.last.toLowerCase().includes(searchUser!.toLowerCase())
+      userFilter.name.first.toLowerCase().includes(searchUser)
     ){
       return userFilter;
     }
@@ -25,7 +24,7 @@ export function useProfileList() {
 
   useEffect(() => {
     api.
-      get(`/?results=12&gender=${genderFilter}&nat=${countryFilter}&name=${searchUser}`, {
+      get(`/?results=12&gender=${genderFilter}&nat=${countryFilter}`, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -35,7 +34,7 @@ export function useProfileList() {
         setLoading(true);
       })
       .catch(console.log)
-  },[genderFilter, countryFilter, searchUser])
+  },[genderFilter, countryFilter])
 
 
   return {

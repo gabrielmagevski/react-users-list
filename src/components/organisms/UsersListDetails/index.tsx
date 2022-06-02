@@ -19,14 +19,15 @@ export function UsersListDetails() {
       </UsersTrs>
 
       {
-       filteringUsers!.length === 0 ? (
-        <UserDontFound>
-          No User Found!
-        </UserDontFound>
+        !loading ? <Loading /> : 
+        filteringUsers!.length === 0 ? (
+          <UserDontFound>
+            No User Found!
+          </UserDontFound>
         ) 
         :
         (
-         loading ? filteringUsers?.map(users => <ListPersons key={users.login.uuid} data={users} /> ) : <Loading /> 
+         loading && filteringUsers?.map(users => <ListPersons key={users.login.uuid} data={users} /> )
         )
       }
     </>

@@ -11,6 +11,7 @@ export function UsersListImages() {
     <>
       <UsersImagesTrs>  
         {
+          !loading ? <Loading /> :
           filteringUsers!.length === 0 ? (
             <UserDontFound>
               No User Found!
@@ -18,7 +19,7 @@ export function UsersListImages() {
           ) 
           :
           (
-            loading ? filteringUsers?.map(usersOnlyImages => <UsersListPersonImages key={usersOnlyImages.login.uuid} data={usersOnlyImages} /> ) : <Loading />
+            loading && filteringUsers?.map(usersOnlyImages => <UsersListPersonImages key={usersOnlyImages.login.uuid} data={usersOnlyImages} /> )
           )
         }
       </UsersImagesTrs>
