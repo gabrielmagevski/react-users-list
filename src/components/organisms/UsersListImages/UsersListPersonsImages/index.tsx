@@ -12,12 +12,13 @@ export default function UsersListPersonImages({ data: { name, picture, location 
   const country = `${location.country}`
   const lat = `${location.coordinates.latitude}`
   const lng = `${location.coordinates.longitude}`
+  const city = `${location.city}`
 
   return (
     <UsersImageInformations>
         
     <ProfileImage
-      onClick={() => navigate(`/profile?name=${userName}&picture=${photoUser}&location=${country}&lat=${lat}&lng=${lng}`)}
+      onClick={() => navigate(`/profile?name=${userName}&picture=${photoUser}&city=${city}&location=${country}&lat=${lat}&lng=${lng}`)}
       wd="150px" 
       src={photoUser} 
       alt={userName}

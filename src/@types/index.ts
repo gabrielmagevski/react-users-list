@@ -13,7 +13,7 @@ export type TypeSelect = SelectHTMLAttributes<HTMLSelectElement> & {
   children: ReactNode;
 }
 
-export type TypeCheckBoxCustom = {
+export type TypeCheckBoxCustom = InputHTMLAttributes<HTMLInputElement> & {
   label: string;
 }
 
@@ -26,22 +26,6 @@ export type TypeProfileImage = HTMLAttributes<HTMLImageElement> & {
   alt: string;
   wd?: string;
   position?: string;
-}
-
-export type TypeUserListContext = {
-  children?: ReactNode;
-  enableViewList?: boolean;
-  setEnableViewList?: React.Dispatch<React.SetStateAction<boolean>>;
-  loading?: boolean;
-  setUsersList?: Dispatch<SetStateAction<TypeUsers[]>>;
-  usersList?: TypeUsers[];
-  setGenderFilter?: Dispatch<SetStateAction<string>>;
-  genderFilter?: string;
-  countryFilter?: string;
-  setCountryFilter?: Dispatch<SetStateAction<string>>;
-  searchUser?: string;
-  setSearchUser?: Dispatch<SetStateAction<string>>;
-  filteringUsers?: TypeUsers[];
 }
 
 export type TypeUsers = {
@@ -67,6 +51,24 @@ export type TypeUsers = {
   picture: {
     large: string;
   }
+}
+
+export type TypeUserListContext = {
+  children?: ReactNode;
+  enableViewList?: boolean;
+  setEnableViewList?: React.Dispatch<React.SetStateAction<boolean>>;
+  loading?: boolean;
+  setUsersList?: Dispatch<SetStateAction<TypeUsers[]>>;
+  usersList?: TypeUsers[];
+  setGenderFilter?: Dispatch<SetStateAction<string>>;
+  genderFilter?: string;
+  countryFilter?: string;
+  setCountryFilter?: Dispatch<SetStateAction<string>>;
+  searchUser?: string;
+  setSearchUser?: Dispatch<SetStateAction<string>>;
+  filteringUsers?: TypeUsers[];
+  isAdult?: boolean;
+  setIsAdult?: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export type TypeDataPersons = {

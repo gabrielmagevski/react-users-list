@@ -6,6 +6,7 @@ export const UserListContext = createContext({} as TypeUserListContext);
 
 export function UserListProvider({ children }: TypeUserListContext) {
   const[ enableViewList, setEnableViewList ] = useState(true);
+
   const {
     loading,
     setUsersList, 

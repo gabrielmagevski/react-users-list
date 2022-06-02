@@ -20,7 +20,7 @@ export function ProfileUserDetails() {
     lat: parseFloat(profile.lat),
     lng: parseFloat(profile.lng),
   }
-
+  console.log(profile)
   return (
    <>
     <ButtonCustom
@@ -42,7 +42,8 @@ export function ProfileUserDetails() {
     </CenteredAvatar>
     <CenteredDetails>
       <ProfileName>{profile.name}</ProfileName>
-      <Description>{`${profile.name} lives ${profile.location}, ${profile.location}`}</Description>
+      
+      <Description>{`${profile.name} lives ${profile.city}, ${profile.location}`}</Description>
     </CenteredDetails>
     </>
   )

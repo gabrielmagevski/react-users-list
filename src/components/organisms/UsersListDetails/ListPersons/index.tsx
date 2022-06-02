@@ -11,6 +11,7 @@ export function ListPersons({ data: { name, picture, dob, location, gender } }: 
   const photoUser = `${picture.large}`
   const age = `${dob.age}`
   const country = `${location.country}`
+  const city = `${location.city}`
   const lat = `${location.coordinates.latitude}`
   const lng = `${location.coordinates.longitude}`
   const userGender = `${gender}`
@@ -21,7 +22,7 @@ export function ListPersons({ data: { name, picture, dob, location, gender } }: 
       <UsersInformations>
       
         <ProfileImage
-          onClick={() => navigate(`/profile?name=${userName}&picture=${photoUser}&location=${country}&lat=${lat}&lng=${lng}`)}
+          onClick={() => navigate(`/profile?name=${userName}&picture=${photoUser}&city=${city}&location=${country}&lat=${lat}&lng=${lng}`)}
           src={photoUser} 
           alt={userName}
         />
