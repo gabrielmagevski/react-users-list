@@ -3,10 +3,11 @@ import { UserListContext } from '../../../context/UserListContext';
 import { Loading } from '../../atoms/Loading';
 
 import { ListPersons } from './ListPersons';
-import { UsersTitle, UsersTrs } from './styles'
+import { UsersTitle, UsersTrs, UserDontFound } from './styles'
 
 export function UsersListDetails() {
-  const { usersList, loading } = useContext(UserListContext);
+  const { loading, filteringUsers } = useContext(UserListContext);
+
   return (
     <>
       <UsersTrs>
@@ -16,7 +17,18 @@ export function UsersListDetails() {
         <UsersTitle>Country</UsersTitle>
         <UsersTitle>Gender</UsersTitle>
       </UsersTrs>
-      { loading ? usersList?.map(users => <ListPersons key={users.login.uuid} data={users} /> ) : <Loading /> }
+
+      {
+       filteringUsers!.length === 0 ? (
+        <UserDontFound>
+          No User Found!
+        </UserDontFound>
+        ) 
+        :
+        (
+         loading ? filteringUsers?.map(users => <ListPersons key={users.login.uuid} data={users} /> ) : <Loading /> 
+        )
+      }
     </>
   )
 }

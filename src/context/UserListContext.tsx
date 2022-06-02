@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 import { TypeUserListContext } from "../@types";
-import { useProfileList } from "../hooks/UserProfileList";
+import { useProfileList } from "../hooks/UseProfileList";
 
 export const UserListContext = createContext({} as TypeUserListContext);
 
@@ -16,6 +16,7 @@ export function UserListProvider({ children }: TypeUserListContext) {
     setCountryFilter,
     searchUser,
     setSearchUser,
+    filteringUsers,
   } = useProfileList();
 
   return (
@@ -32,7 +33,8 @@ export function UserListProvider({ children }: TypeUserListContext) {
       setCountryFilter,
       searchUser,
       setSearchUser,
-      }}
+      filteringUsers,
+    }}
      >
       { children }
     </UserListContext.Provider>

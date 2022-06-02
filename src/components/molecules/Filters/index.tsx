@@ -29,6 +29,7 @@ export function Filters() {
       <form onSubmit={handleSubmit}>
         <GroupSearch>
           <InputCustom 
+           type='search'
            placeholder='Search users...'
            value={searchUser}
            onChange={(e: FormEvent) => setSearchUser!((e.target as HTMLTextAreaElement).value)}

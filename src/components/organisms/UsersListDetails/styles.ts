@@ -32,3 +32,14 @@ export const UsersInformations = styled.td`
   width: 200px;
 
 `;
+
+export const UserDontFound = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 250px;
+
+  font-size: 30px;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+`;

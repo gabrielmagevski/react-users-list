@@ -41,6 +41,7 @@ export type TypeUserListContext = {
   setCountryFilter?: Dispatch<SetStateAction<string>>;
   searchUser?: string;
   setSearchUser?: Dispatch<SetStateAction<string>>;
+  filteringUsers?: TypeUsers[];
 }
 
 export type TypeUsers = {

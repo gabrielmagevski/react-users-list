@@ -29,3 +29,14 @@ export const ProfileName = styled.h3`
 export const UsersImageInformations = styled.td`
   font-size: 18px;
 `;
+
+export const UserDontFound = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 250px;
+
+  font-size: 30px;
+  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+`;

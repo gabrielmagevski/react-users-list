@@ -6,8 +6,22 @@ export function useProfileList() {
   const[ usersList, setUsersList ] = useState<TypeUsers[]>([]);
   const[ loading, setLoading ] = useState(false);
   const [ genderFilter, setGenderFilter ] = useState('all');
-  const [ countryFilter, setCountryFilter ] = useState('us');
+  const [ countryFilter, setCountryFilter ] = useState('all');
   const [ searchUser, setSearchUser ] = useState('');
+
+  const filteringUsers = usersList?.filter(usersFilter);
+
+  function usersFilter(userFilter: TypeUsers) {
+    if (searchUser === '') {
+      return userFilter;
+    } else if (
+      userFilter.name.first.toLowerCase().includes(searchUser!.toLowerCase()) &&
+      userFilter.name.last.toLowerCase().includes(searchUser!.toLowerCase())
+    ){
+      return userFilter;
+    }
+  }
+
 
   useEffect(() => {
     api.
@@ -34,5 +48,7 @@ export function useProfileList() {
     setCountryFilter,
     searchUser,
     setSearchUser,
+    usersFilter,
+    filteringUsers,
   }
 }
