@@ -1,6 +1,12 @@
-import React from 'react';
-import { TypeButton } from '../../../@types';
+import React, { ButtonHTMLAttributes, ReactNode } from 'react';
 import { Button } from './styles';
+
+export type TypeButton = ButtonHTMLAttributes<HTMLButtonElement> & {
+  children?: ReactNode;
+  position?: string;
+  zIndex?: string;
+  mg?: string;
+}
 
 export function ButtonCustom({ children, ...props }: TypeButton) {
   return (

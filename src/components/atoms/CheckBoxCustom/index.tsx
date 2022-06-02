@@ -1,6 +1,9 @@
-import React from 'react';
-import { TypeCheckBoxCustom } from '../../../@types';
+import React, { InputHTMLAttributes } from 'react';
 import { CustomCheckbox } from './styles';
+
+export type TypeCheckBoxCustom = InputHTMLAttributes<HTMLInputElement> & {
+  label: string;
+}
 
 export function CheckBoxCustom({ label, ...props }: TypeCheckBoxCustom) {
   return (

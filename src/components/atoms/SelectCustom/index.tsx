@@ -1,6 +1,10 @@
-import React from 'react'
-import { TypeSelect } from '../../../@types';
+import React, { ReactNode, SelectHTMLAttributes } from 'react'
 import { Select } from './styles';
+
+export type TypeSelect = SelectHTMLAttributes<HTMLSelectElement> & {
+  children: ReactNode;
+}
+
 
 export function SelectCustom({ children, ...props }: TypeSelect) {
   return (

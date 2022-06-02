@@ -1,6 +1,9 @@
-import React from 'react'
-import { typeCustomSwitcher } from '../../../@types'
+import React, { HTMLAttributes } from 'react'
 import { CustomSwitcher } from './styles'
+
+export type typeCustomSwitcher = HTMLAttributes<HTMLInputElement> & {
+  label: string;
+}
 
 export function SwitcherCustom({ label, ...props }: typeCustomSwitcher) {
   return (

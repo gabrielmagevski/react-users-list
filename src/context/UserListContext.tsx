@@ -1,6 +1,29 @@
-import { createContext, useState } from "react";
-import { TypeUserListContext } from "../@types";
-import { useProfileList } from "../hooks/UseProfileList";
+import { 
+  createContext,
+  Dispatch,
+  ReactNode,
+  SetStateAction,
+  useState 
+} from "react";
+import { TypeUsers, useProfileList } from "../hooks/UseProfileList";
+
+export type TypeUserListContext = {
+  children?: ReactNode;
+  enableViewList?: boolean;
+  setEnableViewList?: React.Dispatch<React.SetStateAction<boolean>>;
+  loading?: boolean;
+  setUsersList?: Dispatch<SetStateAction<TypeUsers[]>>;
+  usersList?: TypeUsers[];
+  setGenderFilter?: Dispatch<SetStateAction<string>>;
+  genderFilter?: string;
+  countryFilter?: string;
+  setCountryFilter?: Dispatch<SetStateAction<string>>;
+  searchUser?: string;
+  setSearchUser?: Dispatch<SetStateAction<string>>;
+  filteringUsers?: TypeUsers[];
+  isAdult?: boolean;
+  setIsAdult?: React.Dispatch<React.SetStateAction<boolean>>;
+}
 
 export const UserListContext = createContext({} as TypeUserListContext);
 

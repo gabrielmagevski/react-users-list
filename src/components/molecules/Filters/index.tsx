@@ -21,6 +21,7 @@ export function Filters() {
   
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
+    setSearchUser!((e.target as HTMLTextAreaElement).value)
     console.log(searchUser)
   }
 
@@ -32,7 +33,6 @@ export function Filters() {
            type='search'
            placeholder='Search users...'
            value={searchUser}
-           onChange={(e: FormEvent) => setSearchUser!((e.target as HTMLTextAreaElement).value)}
           />
             <ButtonCustom type='submit'>
               Search

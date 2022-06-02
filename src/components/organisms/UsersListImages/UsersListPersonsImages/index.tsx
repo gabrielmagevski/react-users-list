@@ -1,9 +1,14 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
-import { TypeDataPersons } from '../../../../@types';
+import { TypeUsers } from '../../../../hooks/UseProfileList';
+
 import { ProfileImage } from '../../../atoms/ProfileImage';
 
 import { ProfileName, UsersImageInformations } from '../styles'
+
+export type TypeDataPersons = {
+  data: TypeUsers;
+}
 
 export default function UsersListPersonImages({ data: { name, picture, location } }: TypeDataPersons) {
   const navigate = useNavigate();
