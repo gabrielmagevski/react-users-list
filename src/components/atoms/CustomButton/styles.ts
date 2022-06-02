@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { TypeButton } from "../../../@types";
+import { TypeButton } from "./index";
 
 export const Button = styled.button<TypeButton>`
   display: flex;

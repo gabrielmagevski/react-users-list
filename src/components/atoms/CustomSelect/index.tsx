@@ -6,7 +6,7 @@ export type TypeSelect = SelectHTMLAttributes<HTMLSelectElement> & {
 }
 
 
-export function SelectCustom({ children, ...props }: TypeSelect) {
+export function CustomSelect({ children, ...props }: TypeSelect) {
   return (
     <Select {...props}>
       {children}  

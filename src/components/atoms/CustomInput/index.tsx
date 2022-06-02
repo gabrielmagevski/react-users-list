@@ -3,7 +3,7 @@ import { Input } from './styles';
 
 export type TypeInput = InputHTMLAttributes<HTMLInputElement>
 
-export function InputCustom({ ...props }: TypeInput) {
+export function CustomInput({ ...props }: TypeInput) {
   return (
     <Input {...props} />
   )

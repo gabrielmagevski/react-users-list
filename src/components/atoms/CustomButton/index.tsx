@@ -8,7 +8,7 @@ export type TypeButton = ButtonHTMLAttributes<HTMLButtonElement> & {
   mg?: string;
 }
 
-export function ButtonCustom({ children, ...props }: TypeButton) {
+export function CustomButton({ children, ...props }: TypeButton) {
   return (
     <Button {...props}>
       {children}

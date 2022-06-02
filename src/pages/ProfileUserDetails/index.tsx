@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
-import { ButtonCustom } from '../../components/atoms/ButtonCustom'
+import { CustomButton } from '../../components/atoms/CustomButton'
 import { ProfileImage } from '../../components/atoms/ProfileImage'
 
 import { Maps } from '../../components/organisms/Maps'
@@ -23,14 +23,14 @@ export function ProfileUserDetails() {
   console.log(profile)
   return (
    <>
-    <ButtonCustom
+    <CustomButton
       mg='5px 200px' 
       zIndex='10' 
       position='absolute'
       onClick={() => navigate(-1)}
       >
       Voltar
-    </ButtonCustom>
+    </CustomButton>
     <Maps position={position} />
     <CenteredAvatar>
       <ProfileImage

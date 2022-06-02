@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const CustomSwitcher = styled.div`
+export const Switcher = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
