@@ -25,6 +25,7 @@ export default function UsersListPersonImages({ data: { name, picture, location 
     <ProfileImage
       onClick={() => navigate(`/profile?name=${userName}&picture=${photoUser}&city=${city}&location=${country}&lat=${lat}&lng=${lng}`)}
       wd="150px" 
+      data-cy='profileSubmit'
       src={photoUser} 
       alt={userName}
     />

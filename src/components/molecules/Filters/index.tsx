@@ -30,6 +30,7 @@ export function Filters() {
         <GroupSearch>
           <CustomInput 
            type='search'
+           data-cy='search'
            placeholder='Search users...'
            onChange={(e: FormEvent) => setSearchUser!((e.target as HTMLTextAreaElement).value)}
            value={searchUser}
@@ -40,7 +41,9 @@ export function Filters() {
         </GroupSearch>
       
         <GroupFilter>
-          <CustomSelect value={genderFilter} 
+          <CustomSelect 
+            data-cy='gender-filter'
+            value={genderFilter} 
             onChange={(e: FormEvent) => setGenderFilter!((e.target as HTMLTextAreaElement).value)}
           >
             <option value='all'>All</option>
@@ -49,6 +52,7 @@ export function Filters() {
           </CustomSelect>
 
           <CustomSelect value={countryFilter} 
+            data-cy='country-filter'
             onChange={(e: FormEvent) => setCountryFilter!((e.target as HTMLTextAreaElement).value)}>
             <option value='all'>All</option>
             <option value='br'>Brazil</option>
@@ -60,6 +64,7 @@ export function Filters() {
           <CheckBoxCustom label='Adults' />
           
           <CustomSwitcher 
+           data-cy='swaplist-filter'
             onClick={() => setEnableViewList!(!enableViewList)}
             label='Lista'
           />

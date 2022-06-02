@@ -3,8 +3,10 @@ import {
   Dispatch,
   ReactNode,
   SetStateAction,
+  useEffect,
   useState 
 } from "react";
+
 import { TypeUsers, useProfileList } from "../hooks/UseProfileList";
 
 export type TypeUserListContext = {
@@ -25,11 +27,11 @@ export type TypeUserListContext = {
   setIsAdult?: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export const UserListContext = createContext({} as TypeUserListContext);
+export const UserListContext = createContext<TypeUserListContext>({});
 
 export function UserListProvider({ children }: TypeUserListContext) {
   const[ enableViewList, setEnableViewList ] = useState(true);
-
+  
   const {
     loading,
     setUsersList, 

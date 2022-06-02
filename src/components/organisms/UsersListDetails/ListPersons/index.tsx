@@ -29,6 +29,7 @@ export function ListPersons({ data: { name, picture, dob, location, gender } }: 
           onClick={() => navigate(`/profile?name=${userName}&picture=${photoUser}&city=${city}&location=${country}&lat=${lat}&lng=${lng}`)}
           src={photoUser} 
           alt={userName}
+          data-cy='profileSubmitDetail'
         />
       
       </UsersInformations>
