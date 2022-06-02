@@ -12,11 +12,17 @@ export function useProfileList() {
   const filteringUsers = usersList?.filter(usersFilter);
 
   function usersFilter(userFilter: TypeUsers) {
+    const name = `
+      ${userFilter.name.first.toLowerCase()}
+      ${userFilter.name.last.toLowerCase()}
+    `;
     if (searchUser === '') {
       return userFilter;
     } else if (
-      userFilter.name.first.toLowerCase().includes(searchUser) || 
-      userFilter.name.last.toLowerCase().includes(searchUser)
+      name
+        .trim()
+        .toLocaleLowerCase()
+        .match(new RegExp(searchUser, 'i'))
     ){
       return userFilter;
     }
