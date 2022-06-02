@@ -10,10 +10,12 @@ describe('swap_list', () => {
   });
 
   it('Deve clicar no usuário e ver as principais informações dele', () => {
+    cy.wait(3000)
     cy.get(':nth-child(2) > :nth-child(1) > [data-cy=profileSubmitDetail]').click()
   });
   
   it('Deve voltar para a lista normal', () => {
+    cy.wait(3000)
     cy.get('.sc-bczRLJ').click()
   })
 });
