@@ -1,15 +1,15 @@
-import { Dispatch, HTMLAttributes, InputHTMLAttributes, ReactNode, SetStateAction } from "react"
+import { ButtonHTMLAttributes, Dispatch, HTMLAttributes, InputHTMLAttributes, ReactNode, SelectHTMLAttributes, SetStateAction } from "react"
 
-export type TypeButton = HTMLAttributes<HTMLButtonElement> & {
+export type TypeButton = ButtonHTMLAttributes<HTMLButtonElement> & {
   children?: ReactNode;
   position?: string;
   zIndex?: string;
   mg?: string;
 }
 
-export type TypeInput = HTMLAttributes<HTMLInputElement>
+export type TypeInput = InputHTMLAttributes<HTMLInputElement>
 
-export type TypeSelect = {
+export type TypeSelect = SelectHTMLAttributes<HTMLSelectElement> & {
   children: ReactNode;
 }
 
@@ -35,8 +35,13 @@ export type TypeUserListContext = {
   loading?: boolean;
   setUsersList?: Dispatch<SetStateAction<TypeUsers[]>>;
   usersList?: TypeUsers[];
+  setGenderFilter?: Dispatch<SetStateAction<string>>;
+  genderFilter?: string;
+  countryFilter?: string;
+  setCountryFilter?: Dispatch<SetStateAction<string>>;
+  searchUser?: string;
+  setSearchUser?: Dispatch<SetStateAction<string>>;
 }
-
 
 export type TypeUsers = {
   gender: string; 

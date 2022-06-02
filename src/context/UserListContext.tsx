@@ -9,7 +9,13 @@ export function UserListProvider({ children }: TypeUserListContext) {
   const {
     loading,
     setUsersList, 
-    usersList
+    usersList,
+    setGenderFilter,
+    genderFilter,
+    countryFilter,
+    setCountryFilter,
+    searchUser,
+    setSearchUser,
   } = useProfileList();
 
   return (
@@ -20,6 +26,12 @@ export function UserListProvider({ children }: TypeUserListContext) {
       loading,
       setUsersList, 
       usersList,
+      setGenderFilter,
+      genderFilter,
+      countryFilter,
+      setCountryFilter,
+      searchUser,
+      setSearchUser,
       }}
      >
       { children }

@@ -1,8 +1,9 @@
 import React, { useContext } from 'react'
-import { UsersListImages } from '../../atoms/UsersListImages'
-import { UsersListDetails } from '../../atoms/UsersListDetails'
+
 import { UsersTable } from './styles'
 import { UserListContext } from '../../../context/UserListContext';
+import { UsersListImages } from '../../organisms/UsersListImages';
+import { UsersListDetails } from '../../organisms/UsersListDetails';
 
 export function UsersList() {
   const { enableViewList } = useContext(UserListContext);

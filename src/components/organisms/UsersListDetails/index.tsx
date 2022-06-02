@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { UserListContext } from '../../../context/UserListContext';
-import { Loading } from '../Loading';
+import { Loading } from '../../atoms/Loading';
+
 import { ListPersons } from './ListPersons';
 import { UsersTitle, UsersTrs } from './styles'
 

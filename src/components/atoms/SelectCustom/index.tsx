@@ -2,9 +2,9 @@ import React from 'react'
 import { TypeSelect } from '../../../@types';
 import { Select } from './styles';
 
-export function SelectCustom({ children }: TypeSelect) {
+export function SelectCustom({ children, ...props }: TypeSelect) {
   return (
-    <Select name="All">
+    <Select {...props}>
       {children}  
     </Select>
   )
