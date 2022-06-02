@@ -15,7 +15,8 @@ export function useProfileList() {
     if (searchUser === '') {
       return userFilter;
     } else if (
-      userFilter.name.first.toLowerCase().includes(searchUser)
+      userFilter.name.first.toLowerCase().includes(searchUser) || 
+      userFilter.name.last.toLowerCase().includes(searchUser)
     ){
       return userFilter;
     }
