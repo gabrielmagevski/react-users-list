@@ -1,7 +1,7 @@
 /// <reference types='cypress' />
 
 describe('searchUser', () => {
-  it('Deve pesquisar um usuario', () => {
+  it('Must search for a user', () => {
     // cy.visit = vai visitar a página que queremos testar.
     cy.visit('http://localhost:3000/')
 
@@ -10,12 +10,12 @@ describe('searchUser', () => {
     cy.wait(2000)
   });
 
-  it('Deve clicar no usuário e ver as principais informações dele', () => {
+  it('You must click on the user and see their main information', () => {
     cy.wait(2000)
     cy.get(':nth-child(1) > [data-cy=profileSubmit]').click()
   });
   
-  it('Deve voltar para a lista normal', () => {
+  it('Must go back to normal list', () => {
     cy.wait(3000)
     cy.get('.sc-bczRLJ').click()
   })

@@ -1,7 +1,7 @@
 /// <reference types='cypress' />
 
 describe('swap_list', () => {
-  it('Deve trocar a visualização da lista', () => {
+  it('Must change list view', () => {
     // cy.visit = vai visitar a página que queremos testar.
     cy.visit('http://localhost:3000/')
 
@@ -9,12 +9,12 @@ describe('swap_list', () => {
     cy.get('[data-cy=swaplist-filter]').click()
   });
 
-  it('Deve clicar no usuário e ver as principais informações dele', () => {
+  it('You must click on the user and see their main information', () => {
     cy.wait(3000)
     cy.get(':nth-child(2) > :nth-child(1) > [data-cy=profileSubmitDetail]').click()
   });
   
-  it('Deve voltar para a lista normal', () => {
+  it('Must go back to normal list', () => {
     cy.wait(3000)
     cy.get('.sc-bczRLJ').click()
   })

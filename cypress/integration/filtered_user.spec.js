@@ -1,7 +1,7 @@
 /// <reference types='cypress' />
 
 describe('filteredUser', () => {
-  it('Deve filtrar todos os genêros', () => {
+  it('Must all filter the genres', () => {
     // cy.visit = vai visitar a página que queremos testar.
     cy.visit('http://localhost:3000/')
 
@@ -9,20 +9,20 @@ describe('filteredUser', () => {
     cy.get('[data-cy=gender-filter').select('all')
   });
 
-  it('Deve filtrar um usuario pelo genêro Feminino', () => {
+  it('You must filter a user by the gender Female', () => {
     // cy.visit = vai visitar a página que queremos testar.
 
     cy.wait(2000)
     cy.get('[data-cy=gender-filter').select('female')
   });
 
-  it('Deve filtrar um usuario pelo genêro Masculino', () => {
+  it('You must filter a user by the male gender', () => {
     cy.wait(2000)
     cy.get('[data-cy=gender-filter').select('male')
   });
 
 
-  it('Deve filtrar um usuario pelo país em que reside', () => {
+  it('You must filter a user by the country they live in', () => {
     cy.wait(2000)
     cy.get('[data-cy=country-filter').select('br')
     cy.wait(2000)
