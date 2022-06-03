@@ -21,7 +21,6 @@ export function Filters() {
   
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    console.log(searchUser)
   }
 
   return (

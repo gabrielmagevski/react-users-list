@@ -20,7 +20,6 @@ export function ProfileUserDetails() {
     lat: parseFloat(profile.lat),
     lng: parseFloat(profile.lng),
   }
-  console.log(profile)
   return (
    <>
     <CustomButton
