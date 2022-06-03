@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { TypeProfileImage } from "../../../@types";
+import { TypeProfileImage } from ".";
 
 export const ProfilePicker = styled.img<TypeProfileImage>`
   border-radius: 50%;
